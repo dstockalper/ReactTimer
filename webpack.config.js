@@ -24,6 +24,8 @@ module.exports = {
     alias: { // pick names for our components and tell webpack where to find those components...enables shorter require('') paths
       Main: 'app/components/Main.jsx',
       Navigation: 'app/components/Navigation.jsx',
+      Timer: 'app/components/Timer.jsx',
+      Countdown: 'app/components/Countdown.jsx',
       applicationStyles: 'app/styles/app.scss'
 
     },

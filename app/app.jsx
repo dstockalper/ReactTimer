@@ -8,6 +8,8 @@ var ReactDOM = require('react-dom');
 // ES6 "Destructuring" syntax
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
+var Timer = require('Timer');
+var Countdown = require('Countdown');
 
 // App css
 require('style!css!sass!applicationStyles');
@@ -19,6 +21,8 @@ $(document).foundation();
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={Main}>
+			<Route path="countdown" component={Countdown}></Route>
+			<IndexRoute component={Timer}></IndexRoute>
 		</Route>
 	</Router>,
 	document.getElementById('app')
