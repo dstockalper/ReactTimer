@@ -1,0 +1,17 @@
+.clock {
+  align-items: center;                        // align text vertically
+  background-color: $clock-bg-color;
+  border: 2px solid $clock-border-color;      // line width, style, color
+  border-radius: 50%;                         // Make circle
+  display: flex;                              // flex box makes centering/aligning a grid easy
+  height: 14rem;
+  width: 14rem;
+  justify-content: center;                    // Available when display: flex
+  margin: 4rem auto;                          // auto will center the clock in its container
+}
+
+.clock-text {
+  color: $clock-text-color;
+  font-size: 2.25rem;
+  font-weight: 300;
+}
