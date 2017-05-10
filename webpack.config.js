@@ -22,14 +22,15 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: { // pick names for our components and tell webpack where to find those components...enables shorter require('') paths
+    applicationStyles: 'app/styles/app.scss',
       Main: 'app/components/Main.jsx',
       Navigation: 'app/components/Navigation.jsx',
       Timer: 'app/components/Timer.jsx',
       Countdown: 'app/components/Countdown.jsx',
       CountdownForm: 'app/components/CountdownForm.jsx',
       Clock: 'app/components/Clock.jsx',
-      applicationStyles: 'app/styles/app.scss'
-
+      Controls: 'app/components/Controls.jsx'
+      
     },
     extensions: ['', '.js', '.jsx'] // file extensions to recognize
   },
