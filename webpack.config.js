@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [ // Where webpack starts compiling the bundle file; the first file webpack looks in for required modules and components, and adds them to bundle.js
@@ -30,7 +31,7 @@ module.exports = {
       CountdownForm: 'app/components/CountdownForm.jsx',
       Clock: 'app/components/Clock.jsx',
       Controls: 'app/components/Controls.jsx'
-      
+
     },
     extensions: ['', '.js', '.jsx'] // file extensions to recognize
   },
@@ -44,6 +45,11 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
+    ]
+  },
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './node_modules/foundation-sites/scss')  // Make Sass loader aware that we have files to include from this folder
     ]
   },
   devtool: 'cheap-module-eval-source-map' // Creates "source maps" that allows developer to debug own code and not the bundled code that was transformed by webpack
